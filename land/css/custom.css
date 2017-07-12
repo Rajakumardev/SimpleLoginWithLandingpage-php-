@@ -1,0 +1,37 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+body,html{
+    height:100%;
+}
+.bg-wrapper{
+background: url('../images/bg.jpg');
+background-attachment: fixed;
+background-size: cover;
+filter:blur(2.5px);
+position: absolute;
+top:0px;
+left: 0px;
+bottom: 0px;
+right:0px;
+z-index: -1;
+}
+.main-head{
+    margin:100px auto;
+    width:100%;
+    color:white;
+}
+.main-head h1{
+    font-size: 70px;
+    text-shadow: rgba(0,0,0,1) 1px 1px 1px,
+                 rgba(0,0,0,1) 1px 2px 1px,
+                 rgba(0,0,0,1) 1px 3px 1px,
+                 rgba(0,0,0,1) 1px 4px 1px,
+                 rgba(0,0,0,1) 1px 2px 1px,
+                 rgba(0,0,0,1) 1px 3px 1px,
+                 rgba(0,0,0,1) 1px 4px 1px,
+                 rgba(0,0,0,1) 1px 2px 1px,
+                 rgba(0,0,0,1) 1px 3px 1px,
+                 rgba(0,0,0,1) 1px 4px 1px;
+}
