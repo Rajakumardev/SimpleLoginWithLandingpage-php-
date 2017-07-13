@@ -18,20 +18,57 @@ right:0px;
 z-index: -1;
 }
 .main-head{
-    margin:100px auto;
+    margin:40px auto;
     width:100%;
-    color:white;
+    color:black;
 }
 .main-head h1{
     font-size: 70px;
     text-shadow: rgba(0,0,0,1) 1px 1px 1px,
-                 rgba(0,0,0,1) 1px 2px 1px,
-                 rgba(0,0,0,1) 1px 3px 1px,
-                 rgba(0,0,0,1) 1px 4px 1px,
-                 rgba(0,0,0,1) 1px 2px 1px,
-                 rgba(0,0,0,1) 1px 3px 1px,
-                 rgba(0,0,0,1) 1px 4px 1px,
-                 rgba(0,0,0,1) 1px 2px 1px,
-                 rgba(0,0,0,1) 1px 3px 1px,
-                 rgba(0,0,0,1) 1px 4px 1px;
+                 rgba(255,255,255,1) 3px 2px 1px,
+                 rgba(255,255,255,1) 3px 3px 1px,
+                 rgba(255,255,255,1) 3px 4px 1px,
+                 rgba(255,255,255,1) 3px 2px 1px,
+                 rgba(255,255,255,1) 3px 3px 1px,
+                 rgba(255,255,255,1) 3px 4px 1px,
+                 rgba(255,255,255,1) 3px 2px 1px,
+                 rgba(255,255,255,1) 3px 3px 1px,
+                 rgba(0,0,0,1) 3px 4px 1px,
+                 rgba(0,0,0,1) 3px 5px 1px;
+}
+.panel-opt{
+    height:100px;
+    margin:60px auto;
+}
+.icostyle{
+    font-size:100px;
+    color:white;
+    background: rgba(0,0,0,0.5);
+    display: block;
+    width:100%;
+    border-radius: 10px;
+    height: 100%;
+    padding:20px;
+    text-align: center;
+    transition: all 1s;
+}
+.icostyle:hover{
+    transform: scale(1.2);
+}
+@media screen and (max-width: 680px) {
+    .main-head{
+    margin:10px auto;
+    }
+    .main-head h1{
+    font-size: 40px;
+    }
+    .panel-opt{
+    height:30px;
+    margin:20px auto;
+    }
+    .icostyle{
+    font-size:40px;
+    margin-top:10px;
+    vertical-align: center;
+    }
 }
