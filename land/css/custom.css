@@ -55,6 +55,61 @@ z-index: -1;
 .icostyle:hover{
     transform: scale(1.2);
 }
+.login-overlay{
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    right:0px;
+    height:100%;
+    margin-top:0;
+    z-index: 7;
+    transition: all 1s;
+}
+.closebtn{
+    font-size: 50px;
+    position:absolute;
+    right:50px;
+    top:20px;
+    color:white;
+    cursor: pointer;
+    transition: all 1s;
+}
+.closebtn:hover{
+    transform: rotate(180deg);
+    alt: close;
+}
+.login-content{
+    width:35%;
+    text-align: left;
+    margin: 150px auto;
+}
+.login-content h4{
+    color:white;
+    padding-top:10px;
+    font-size: 40px;
+    border-bottom:10px solid lightgreen;
+    padding-bottom: 10px;
+}
+.login-content form{
+    padding-top:30px;
+}
+.login-content form table{
+    width:95%;
+    margin:0px auto;
+}
+.login-content form table td{
+    padding:10px;
+}
+input[type="text"],input[type="password"]{
+    width:100%;
+    padding:10px;
+    border-radius: 10px;
+    border:none;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 680px) {
     .main-head{
     margin:10px auto;
@@ -63,12 +118,18 @@ z-index: -1;
     font-size: 40px;
     }
     .panel-opt{
-    height:30px;
+    height:10px;
     margin:20px auto;
     }
     .icostyle{
-    font-size:40px;
+    font-size:20px;
     margin-top:10px;
+    text-align: left;
     vertical-align: center;
     }
+    .login-content{
+    width:90%;
+    text-align: left;
+    margin: 70px auto;
+}
 }
