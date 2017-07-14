@@ -1,3 +1,29 @@
+<?php
+    $con = mysqli_connect("localhost","root","","Stockdb");
+    if(!$con){
+        die("DATABASE ERROR");
+    }
+    $error=0;
+    $uname = $_POST['uname'];
+    $password = $_POST['pass'];
+    if(empty($uname)){
+        $error = 1;
+    }else if(empty($password)){
+        $error = 2;
+    }else{
+        $query = "SELECT *FROM users WHERE uname='".$uname."' and upass='".$password."'";
+        $result = mysqli_query($con,$query);
+        if(!$result){
+            echo "<div class='error'><h4><li>QUERY ERROR(".mysqli_error($con).").</li></h4></div>";
+        }else{
+            if(mysqli_num_rows($result) == 1){
+                echo "<div class='success'><h4><li>LOGIN SUCCESSFULL.</li></h4></div>";
+            }else{
+                echo "<div class='error'><h4><li>LOGIN UNSUCCESSFULL(username/password incorrect).</li></h4></div>";
+            }
+        }
+    }
+?>
 <!doctype html>
 <html>
     <!--HEAD TAG-->
@@ -10,6 +36,15 @@
     <body>
         <div class="bg-wrapper container-fluid">
         </div>
+        <?php
+                            if($error == 1){
+                                echo "<div class='error'><h4><li>Email Must not empty.</li></h4></div>";
+                            }else if($error == 2){
+                                echo "<div class='error'><h4><li>Password Must not empty.</li></h4></div>";
+                            }else if($error == 0){
+                                echo "";
+                            }
+                        ?>
         <div class="container-fluid">
             <div class="row main-head">
                 <div class="col-sm-12 text-center">
@@ -50,10 +85,10 @@
             <div class="closebtn" onclick="closeNav()">&times</div>
             <div class="login-content" id="login-content">
                 <h4>Login</h4>
-                <form action="">
+                <form action="" method="POST">
                     <table>
-                        <tr><td><input type="text" placeholder="Username"></td></tr>
-                        <tr><td><input type="password" placeholder="password"></td></tr>
+                        <tr><td><input type="text" placeholder="Username"name="uname"></td></tr>
+                        <tr><td><input type="password" placeholder="password" name="pass"></td></tr>
                         <tr><td align="right"><input type="submit" value="Login" class="btn btn-success"></td></tr>
                     </table>
                 </form>

@@ -109,7 +109,26 @@ input[type="text"],input[type="password"]{
     border:none;
     font-size: 20px;
 }
-
+.error{
+    color:white;
+    background: rgba(255,10,100,0.7);
+    border-radius: 5px;
+    font-size:20px;
+    padding:10px;
+    border-left:5px solid white;
+    margin:10px auto;
+    width:90%;
+}
+.success{
+    color:white;
+    background: rgba(10,255,100,0.7);
+    border-radius: 5px;
+    font-size:20px;
+    padding:10px;
+    border-left:5px solid white;
+    margin:10px auto;
+    width:90%;
+}
 @media screen and (max-width: 680px) {
     .main-head{
     margin:10px auto;
